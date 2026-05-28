@@ -9,4 +9,12 @@ public class Provider {
   private Contact contact;
   private CategoryProvider categoryProvider;
 
+  public Provider(Long id, String name, String description, Address address, Contact contact, CategoryProvider categoryProvider) {
+    this.id = id;
+    this.name = name;
+    this.description = description;
+    this.address = address;
+    this.contact = contact;
+  }
+
 }
