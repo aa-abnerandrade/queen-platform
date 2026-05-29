@@ -1,4 +1,4 @@
 package com.devtoys.queenplatform.model;
 
-public class CategoryService {
+public class CategoryOffering {
 }
