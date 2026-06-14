@@ -1,5 +1,6 @@
 package com.devtoys.queenplatform.model;
 
+
 public class Provider {
 
   private Long id;
@@ -7,6 +8,7 @@ public class Provider {
   private String description;
   private Address address;
   private Contact contact;
+  private TypeProvider typeProvider;
   private CategoryProvider categoryProvider;
 
   public Provider(long id, String name, String description) {
