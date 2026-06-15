@@ -6,8 +6,6 @@ public class Provider {
   private Long id;
   private String name;
   private String description;
-  private Address address;
-  private Contact contact;
   private TypeProvider typeProvider;
   private CategoryProvider categoryProvider;
 
@@ -17,12 +15,10 @@ public class Provider {
     this.description = description;
   }
 
-  public Provider(Long id, String name, String description, Address address, Contact contact, CategoryProvider categoryProvider) {
+  public Provider(Long id, String name, String description, CategoryProvider categoryProvider) {
     this.id = id;
     this.name = name;
     this.description = description;
-    this.address = address;
-    this.contact = contact;
     this.categoryProvider = categoryProvider;
   }
 
