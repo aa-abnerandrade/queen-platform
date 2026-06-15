@@ -7,7 +7,7 @@ VALUES
     (4, "Medical", "Healthcare services"),
     (5, "Education", "Educational services and tutoring"),
     (6, "Entertainment", "Entertainment and recreational services"),
-    (7, "Food & Beverage", "Restaurants and food delivery services"),
+    (7, "Food and Beverage", "Restaurants and food delivery services"),
     (8, "Home Services", "Home maintenance and repair services"),
     (9, "Automotive", "Car repair and maintenance services"),
     (10, "Beauty Salon", "Beauty and skincare services");
