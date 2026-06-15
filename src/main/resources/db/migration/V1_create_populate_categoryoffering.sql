@@ -1,3 +1,9 @@
+CREATE TABLE category_offering (
+    id INT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT
+);
+
 INSERT INTO category_offering
 (id, name, description)
 VALUES

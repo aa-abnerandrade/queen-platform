@@ -1,3 +1,12 @@
+CREATE TABLE provider (
+    id INT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    type_provider VARCHAR(50) NOT NULL,
+    category_provider_id INT NOT NULL,
+    FOREIGN KEY (category_provider_id) REFERENCES category_provider(id)
+);
+
 INSERT INTO provider(id, name, description, type_provider, category_provider_id)
 VALUES
     (1,"Master Barber Shop", "A traditional barber shop offering classic haircuts and grooming services for men", "SERVICE", 1),
