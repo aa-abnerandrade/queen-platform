@@ -1,11 +1,11 @@
 package com.devtoys.queenplatform.model;
 
 public class Offering {
-
   private Long id;
   private String name;
   private String description;
-  private CategoryProvider categoryProvider;
+  private CategoryOffering categoryOffering;
+  private Provider provider;
 
 
   public Offering(Long id, String name, String description) {

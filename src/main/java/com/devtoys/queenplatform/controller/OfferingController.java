@@ -17,7 +17,7 @@ public class OfferingController {
   }
 
   public ResponseEntity<List<Offering>> getAllServices() {
-    List<Offering> offerings = offeringService.getAllServices();
+    List<Offering> offerings = offeringService.getAllOfferings();
     return ResponseEntity.ok(offerings);
   }
 

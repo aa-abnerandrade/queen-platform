@@ -6,7 +6,7 @@ import com.devtoys.queenplatform.repository.ProviderRepository;
 import java.util.List;
 
 public class ProviderService {
-  private ProviderRepository providerRepository;
+  private final ProviderRepository providerRepository;
 
   public ProviderService(ProviderRepository providerRepository) {
     this.providerRepository = providerRepository;
