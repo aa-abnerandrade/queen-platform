@@ -1,11 +1,11 @@
 CREATE TABLE category_provider (
     id INT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    description TEXT
+    name_category_provider VARCHAR(255) NOT NULL,
+    description_category_provider TEXT
 );
 
 INSERT INTO category_provider
-(id, name, description)
+(id, name_category_provider, description_category_provider)
 VALUES
     (1, "Barber Shop", "Men's aesthetic services"),
     (2, "Pet Shop", "Pet Services"),

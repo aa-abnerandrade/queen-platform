@@ -1,11 +1,11 @@
 CREATE TABLE category_offering (
     id INT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    description TEXT
+    name_category_offering VARCHAR(255) NOT NULL,
+    description_category_offering TEXT
 );
 
 INSERT INTO category_offering
-(id, name, description)
+(id, name_category_offering, description_category_offering)
 VALUES
     (1, "Haircut", "Professional haircutting services for men"),
     (2, "Beard Trim", "Professional beard trimming services"),
