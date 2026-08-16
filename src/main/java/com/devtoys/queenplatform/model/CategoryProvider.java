@@ -19,7 +19,9 @@ public class CategoryProvider {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
+
   private String nameCategoryProvider;
+
   private String descriptionCategoryProvider;
 
 }
