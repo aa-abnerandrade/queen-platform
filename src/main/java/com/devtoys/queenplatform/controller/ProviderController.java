@@ -3,6 +3,7 @@ package com.devtoys.queenplatform.controller;
 import com.devtoys.queenplatform.model.Offering;
 import com.devtoys.queenplatform.model.Provider;
 import com.devtoys.queenplatform.service.ProviderService;
+import com.devtoys.queenplatform.dto.ProviderDto;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.http.ResponseEntity;
@@ -21,8 +22,8 @@ public class ProviderController {
   private final ProviderService providerService;
 
   @GetMapping("/all")
-  public ResponseEntity<List<Provider>> getAllProviders() {
-    List<Provider> providers = providerService.getAllProviders();
+  public ResponseEntity<List<ProviderDto>> getAllProviders() {
+    List<ProviderDto> providers = providerService.getAllProviders();
     return ResponseEntity.ok().body(providers);
   }
 

@@ -1,5 +1,6 @@
 package com.devtoys.queenplatform.service;
 
+import com.devtoys.queenplatform.dto.ProviderDto;
 import com.devtoys.queenplatform.model.Offering;
 import com.devtoys.queenplatform.model.Provider;
 import com.devtoys.queenplatform.repository.ProviderRepository;
@@ -13,8 +14,12 @@ import java.util.List;
 public class ProviderService {
   private final ProviderRepository providerRepository;
 
-  public List<Provider> getAllProviders() {
-    return providerRepository.findAll();
+  public List<ProviderDto> getAllProviders() {
+    List<Provider> providers = providerRepository.findAll();
+    List<ProviderDto> dtos = providers.stream()
+            .map(p -> new ProviderDto(p.getId(), p.getName(), p.getDescription(), p.getTypeProvider(), p.getCategoryProvider()))
+            .toList();
+    return dtos;
   }
 
   public Provider getProviderById(Long id) {

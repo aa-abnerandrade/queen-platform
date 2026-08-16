@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -31,6 +32,7 @@ public class Offering {
   @JoinColumn(name = "category_offering_id")
   private CategoryOffering categoryOffering;
 
+  @JsonBackReference
   @ManyToOne
   @JoinColumn(name = "provider_id")
   private Provider provider;

@@ -7,6 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.EnumType;
 import lombok.AllArgsConstructor;
@@ -38,6 +39,7 @@ public class Provider {
   private CategoryProvider categoryProvider;
 
   @OneToMany(mappedBy = "provider")
+  @JsonManagedReference
   private List<Offering> offerings;
 
 
