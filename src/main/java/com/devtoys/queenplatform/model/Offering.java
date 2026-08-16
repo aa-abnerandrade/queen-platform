@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,7 +20,11 @@ public class Offering {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
+
+  @NotNull
   private String name;
+
+  @NotNull
   private String description;
 
   @ManyToOne
@@ -29,7 +34,5 @@ public class Offering {
   @ManyToOne
   @JoinColumn(name = "provider_id")
   private Provider provider;
-
-  public Offering() {}
 
 }
