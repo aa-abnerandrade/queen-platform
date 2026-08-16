@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Conditional;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,12 +26,14 @@ public class ProviderController {
     return ResponseEntity.ok().body(providers);
   }
 
-  public ResponseEntity<Provider> getProviderById(Long id) {
+  @GetMapping("/{id}")
+  public ResponseEntity<Provider> getProviderById(@PathVariable Long id) {
     Provider provider = providerService.getProviderById(id);
     return ResponseEntity.ok().body(provider);
   }
 
-  public ResponseEntity<List<Offering>> getOfferingsByProviderId(Long providerId) {
+  @GetMapping("/{providerId}/offerings")
+  public ResponseEntity<List<Offering>> getOfferingsByProviderId(@PathVariable Long providerId) {
     List<Offering> providerOfferings = providerService.getOfferingsByProviderId(providerId);
     return ResponseEntity.ok().body(providerOfferings);
   }

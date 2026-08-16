@@ -35,4 +35,7 @@ public class Offering {
   @JoinColumn(name = "provider_id")
   private Provider provider;
 
+  public Offering() {
+  }
+
 }

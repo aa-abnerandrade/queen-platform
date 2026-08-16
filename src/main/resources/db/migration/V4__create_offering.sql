@@ -3,7 +3,7 @@ CREATE TABLE offering (
   name VARCHAR(255) NOT NULL,
   description TEXT,
   category_offering_id BIGINT NOT NULL,
-  provider_id BIGINT NOT NULL,
+  provider_id BIGINT NOT NULL
 );
 
 INSERT INTO offering (name, description, category_offering_id, provider_id)

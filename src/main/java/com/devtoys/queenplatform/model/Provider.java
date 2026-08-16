@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.EnumType;
 import lombok.AllArgsConstructor;
@@ -36,16 +37,20 @@ public class Provider {
   @JoinColumn(name = "category_provider_id")
   private CategoryProvider categoryProvider;
 
+  @OneToMany(mappedBy = "provider")
   private List<Offering> offerings;
 
 
-  public Provider(Long id, String name, String description, TypeProvider typeProvider, CategoryProvider categoryProvider) {
-    this.id = id;
+  public Provider() {
+    this.offerings = new ArrayList<>();
+  }
+
+  public Provider(String name, String description, TypeProvider typeProvider, CategoryProvider categoryProvider) {
     this.name = name;
     this.description = description;
     this.typeProvider = typeProvider;
     this.categoryProvider = categoryProvider;
-    this.offerings = new ArrayList<Offering>();
+    this.offerings = new ArrayList<>();
   }
 
 }
