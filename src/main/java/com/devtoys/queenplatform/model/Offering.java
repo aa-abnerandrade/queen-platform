@@ -18,6 +18,7 @@ import java.math.BigDecimal;
 @Setter
 @Getter
 @Entity
+@NoArgsConstructor
 @AllArgsConstructor
 public class Offering {
 
