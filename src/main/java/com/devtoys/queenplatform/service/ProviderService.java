@@ -17,7 +17,7 @@ public class ProviderService {
   public List<ProviderDto> getAllProviders() {
     List<Provider> providers = providerRepository.findAll();
     List<ProviderDto> dtos = providers.stream()
-            .map(p -> new ProviderDto(p.getId(), p.getName(), p.getDescription(), p.getTypeProvider(), p.getCategoryProvider()))
+            .map(p -> new ProviderDto(p.getId(), p.getName(), p.getDescription(), p.getLogoUrl(), p.getTypeProvider()))
             .toList();
     return dtos;
   }

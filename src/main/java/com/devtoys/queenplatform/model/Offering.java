@@ -10,7 +10,10 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.math.BigDecimal;
 
 @Setter
 @Getter
@@ -28,16 +31,12 @@ public class Offering {
   @NotNull
   private String description;
 
-  @ManyToOne
-  @JoinColumn(name = "category_offering_id")
-  private CategoryOffering categoryOffering;
+  @NotNull
+  private BigDecimal price;
 
   @JsonBackReference
   @ManyToOne
   @JoinColumn(name = "provider_id")
   private Provider provider;
-
-  public Offering() {
-  }
 
 }

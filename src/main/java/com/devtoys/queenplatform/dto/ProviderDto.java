@@ -1,6 +1,5 @@
 package com.devtoys.queenplatform.dto;
 
-import com.devtoys.queenplatform.model.CategoryProvider;
 import com.devtoys.queenplatform.model.TypeProvider;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,6 +10,6 @@ public class ProviderDto {
   private Long id;
   private String name;
   private String description;
+  private String logoUrl;
   private TypeProvider typeProvider;
-  private CategoryProvider categoryProvider;
 }

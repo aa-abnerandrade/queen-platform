@@ -31,27 +31,21 @@ public class Provider {
 
   private String description;
 
+  private String logoUrl;
+
   @Enumerated(EnumType.STRING)
   private TypeProvider typeProvider;
-
-  @ManyToOne
-  @JoinColumn(name = "category_provider_id")
-  private CategoryProvider categoryProvider;
 
   @OneToMany(mappedBy = "provider")
   @JsonManagedReference
   private List<Offering> offerings;
 
 
-  public Provider() {
-    this.offerings = new ArrayList<>();
-  }
-
-  public Provider(String name, String description, TypeProvider typeProvider, CategoryProvider categoryProvider) {
+public Provider(String name, String description, String logoUrl, TypeProvider typeProvider) {
     this.name = name;
     this.description = description;
+    this.logoUrl = logoUrl;
     this.typeProvider = typeProvider;
-    this.categoryProvider = categoryProvider;
     this.offerings = new ArrayList<>();
   }
 
