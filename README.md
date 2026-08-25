@@ -23,4 +23,5 @@ Passos para testar localmente
 @Aspect | @Component | @Before | @After | @Around | @Pointcut
 - TODO: Implementar @Transactional
 - TODO: Implementar AOP para métodos (com custom annotation)
+- TODO: Implementar RabbitMQ
 
