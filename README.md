@@ -4,15 +4,15 @@
 Passos para testar localmente
 
 1. Levantar MySQL:
-```shell
+```zsh
    docker-compose up -d
 ```
 2. Buildar projeto:
-```shell
+```zsh
    mvn clean package
 ```
 3. Rodar projeto:
-```shell
+```zsh
    mvn spring-boot:run
 ```
 *Ou via Run Configuration do IntelliJ*
